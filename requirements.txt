@@ -1,0 +1,6 @@
+requests;
+Flask;
+Flask-PyMongo;
+pymongo;
+dnspython;
+waitress;
