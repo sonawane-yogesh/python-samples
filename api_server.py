@@ -2,18 +2,17 @@ from logging import debug
 from flask import Flask
 import flask
 from flask import json
-from flask.helpers import flash
-from flask.json import jsonify
 from flask_pymongo import PyMongo
-
 from bson import json_util
-
 from home import home_bp
 from contact import contact_bp
 from project import project_bp
 from server import get_projects, insertProject
+from upload_file import upload_file
 
 app = Flask(__name__)
+UPLOAD_FOLDER="D:\\python-samples\\uploads"
+app.config["UPLOAD_FOLDER"]=UPLOAD_FOLDER
 # app.config["MONGO_URI"]="mongodb://localhost:28000/fkreqpkgdb"
 #mongo = PyMongo(app)
 
@@ -55,6 +54,11 @@ def addProject():
     )
     return response
 
+
+@app.route("/upload-file",methods=["post"])
+def uploadFile():
+    msg=upload_file(app)  
+    return msg
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=10050)
