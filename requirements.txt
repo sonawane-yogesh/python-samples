@@ -4,3 +4,4 @@ Flask-PyMongo;
 pymongo;
 dnspython;
 waitress;
+pyspark;
