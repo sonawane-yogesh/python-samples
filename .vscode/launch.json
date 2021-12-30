@@ -1,0 +1,14 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [{
+        "name": "Python: Current File",
+        "type": "python",
+        "request": "launch",
+        "program": "${file}",
+        "console": "integratedTerminal",
+        "args": ["--exe-path", "C:/Users/sonaw/Documents/Intel/OpenVINO/omz_demos_build/intel64/Debug", "--api-url", "http://127.0.0.1:3900/api/asset/add"]
+    }]
+}
